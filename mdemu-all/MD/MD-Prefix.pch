@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'MD' target in the 'MD' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+// Imagine
+#import "config.h"
+
+// MD.emu
+#define LSB_FIRST
+#define NO_SCD
+#define NO_SYSTEM_PICO
+#define SUPPORT_16BPP_RENDER
