@@ -470,6 +470,7 @@ UIImageView* pauseImage;
     [MobClick startWithAppkey:kUmengAppKey];
     [[DianJinOfferPlatform defaultPlatform] setAppId:kDianjinAppId andSetAppKey:kDianjinAppKey];
 	[[DianJinOfferPlatform defaultPlatform] setOfferViewColor:kDJBrownColor];
+    [[DianJinOfferPlatform defaultPlatform]setOfferViewAutoRotate:YES];
 
 	using namespace Base;
 	NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
@@ -531,7 +532,12 @@ UIImageView* pauseImage;
     [view addSubview:glView];
     [[MDGameViewController sharedInstance] setView:view];
     
-	[window addSubview:[MDGameViewController sharedInstance].view];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0) {
+        window.rootViewController = [MDGameViewController sharedInstance];
+    } else {
+        [window addSubview:[MDGameViewController sharedInstance].view];
+    }
+//    [window addSubview:[MDGameViewController sharedInstance].view];
     
     pauseImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pause"]];
     pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, 0, 60, 60);
@@ -539,12 +545,13 @@ UIImageView* pauseImage;
     [glView addSubview:pauseImage];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    
-    [[MDGameViewController sharedInstance] showGameList];
-	
-	[UIApplication sharedApplication].idleTimerDisabled = YES;
 
+	[UIApplication sharedApplication].idleTimerDisabled = YES;
+//  [[MDGameViewController sharedInstance] showGameList];
 	[window makeKeyAndVisible];
+    [[MDGameViewController sharedInstance] showGameList];
+    
+    
     
     [UMFeedback checkWithAppkey:kUmengAppKey];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRecNewMsg:) name:UMFBCheckFinishedNotification object:nil];

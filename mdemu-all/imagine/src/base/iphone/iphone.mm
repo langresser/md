@@ -532,13 +532,14 @@ UIImageView* pauseImage;
     [view addSubview:glView];
     [[MDGameViewController sharedInstance] setView:view];
     
-//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0) {
-//        window.rootViewController = [MDGameViewController sharedInstance];
-//    } else {
-//        [window addSubview:[MDGameViewController sharedInstance].view];
-//    }
-    [window addSubview:[MDGameViewController sharedInstance].view];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0) {
+        window.rootViewController = [MDGameViewController sharedInstance];
+    } else {
+        [window addSubview:[MDGameViewController sharedInstance].view];
+    }
+//    [window addSubview:[MDGameViewController sharedInstance].view];
     
+    CGRect rect1 = glView.bounds;
     pauseImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pause"]];
     pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, 0, 60, 60);
     pauseImage.alpha = 0.3;

@@ -105,6 +105,16 @@ int g_currentMB = 0;
     }
 }
 
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self adjustView:toInterfaceOrientation];
@@ -393,20 +403,6 @@ int g_currentMB = 0;
             default:
                 break;
         }
-    }
-}
-
-- (void)appActivatedDidFinish:(NSDictionary *)resultDic
-{
-    NSLog(@"%@", resultDic);
-    NSNumber *result = [resultDic objectForKey:@"result"];
-    if ([result boolValue]) {
-        NSNumber *awardAmount = [resultDic objectForKey:@"awardAmount"];
-        NSString *identifier = [resultDic objectForKey:@"identifier"];
-        NSLog(@"app identifier = %@", identifier);
-        g_currentMB += [awardAmount floatValue];
-        [[NSUserDefaults standardUserDefaults]setInteger:g_currentMB forKey:@"MB"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
     }
 }
 

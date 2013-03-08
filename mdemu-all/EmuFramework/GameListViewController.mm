@@ -96,6 +96,7 @@ extern int g_currentMB ;
     [_banner startWithTimeInterval:20 delegate:self];
     _banner.center = CGPointMake(rect.size.width / 2, 25);
     [self.view addSubview:_banner];
+    [_banner startWithTimeInterval:30 delegate:self];
 
     int offset = 0;
     if (isPad()) {
@@ -153,6 +154,8 @@ extern int g_currentMB ;
     } else {
         m_purchaseList = [[NSMutableArray alloc]initWithArray:array];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appActivatedDidFinish:) name:kDJAppActivateDidFinish object:nil];
 }
 
 -(void)adjustView:(UIInterfaceOrientation)toInterfaceOrientation
@@ -190,6 +193,16 @@ extern int g_currentMB ;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (YES);
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -375,8 +388,9 @@ extern int g_currentMB ;
     return NO;
 }
 
-- (void)appActivatedDidFinish:(NSDictionary *)resultDic
+- (void)appActivatedDidFinish:(NSNotification *)notice;
 {
+    NSDictionary* resultDic = [notice object];
     NSLog(@"%@", resultDic);
     NSNumber *result = [resultDic objectForKey:@"result"];
     if ([result boolValue]) {

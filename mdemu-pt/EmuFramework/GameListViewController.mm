@@ -83,19 +83,20 @@ extern int g_currentMB ;
     [m_tableView setBackgroundView:nil];
     [self.view addSubview:m_tableView];
     
-//    DJOfferBannerStyle bannerType = kDJBannerStyle320_50;
-//    if (isPad()) {
-//        bannerType = kDJBannerStyle480_50;
-//    }
-//    DianJinOfferBanner *_banner = [[DianJinOfferBanner alloc] initWithOfferBanner:CGPointMake(0, 0) style:bannerType];
-//    DianJinTransitionParam *transitionParam = [[DianJinTransitionParam alloc] init];
-//    transitionParam.animationType = kDJTransitionCube;
-//    transitionParam.animationSubType = kDJTransitionFromTop;
-//    transitionParam.duration = 1.0;
-//    [_banner setupTransition:transitionParam];
-//    [_banner startWithTimeInterval:20 delegate:self];
-//    _banner.center = CGPointMake(rect.size.width / 2, 25);
-//    [self.view addSubview:_banner];
+    DJOfferBannerStyle bannerType = kDJBannerStyle320_50;
+    if (isPad()) {
+        bannerType = kDJBannerStyle480_50;
+    }
+    _banner = [[DianJinOfferBanner alloc] initWithOfferBanner:CGPointMake(0, 0) style:bannerType];
+    DianJinTransitionParam *transitionParam = [[DianJinTransitionParam alloc] init];
+    transitionParam.animationType = kDJTransitionCube;
+    transitionParam.animationSubType = kDJTransitionFromTop;
+    transitionParam.duration = 1.0;
+    [_banner setupTransition:transitionParam];
+    [_banner startWithTimeInterval:20 delegate:self];
+    _banner.center = CGPointMake(rect.size.width / 2, 25);
+    [self.view addSubview:_banner];
+    [_banner startWithTimeInterval:30 delegate:self];
 
     int offset = 0;
     if (isPad()) {
@@ -121,57 +122,13 @@ extern int g_currentMB ;
     label.text = [NSString stringWithFormat:@"(当前M币:%d)", g_currentMB];
     [self.view addSubview:label];
     
-    offset = 220;
-    if (isPad()) {
-        offset = 620;
-    }
-    UIGlossyButton* btnRefresh = [[UIGlossyButton alloc]initWithFrame:CGRectMake(10 + offset, 60, 80, 30)];
-    [btnRefresh setTitle:@"刷新" forState:UIControlStateNormal];
-    btnRefresh.titleLabel.font = [UIFont systemFontOfSize:15];
-    [btnRefresh addTarget:self action:@selector(onClickRefresh) forControlEvents:UIControlEventTouchUpInside];
-    
-    [btnRefresh useWhiteLabel: YES];
-    btnRefresh.tintColor = [UIColor brownColor];
-	[btnRefresh setShadow:[UIColor blackColor] opacity:0.8 offset:CGSizeMake(0, 1) blurRadius: 4];
-    [btnRefresh setGradientType:kUIGlossyButtonGradientTypeLinearSmoothBrightToNormal];
-    [self.view addSubview:btnRefresh];
+    [self adjustView:self.interfaceOrientation];
 }
 
 -(void)onClickApp
 {
     [MobClick event:@"moreapp"];
     [[DianJinOfferPlatform defaultPlatform]showOfferWall: self delegate:self];
-}
-
--(void)onClickRefresh
-{
-    NSMutableDictionary* myGame = [m_romData objectAtIndex:0];
-    NSMutableArray* myGameList = [myGame objectForKey:@"roms"];
-    [myGameList removeAllObjects];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-	NSArray* dirContents = [fileManager contentsOfDirectoryAtPath:basePath error:nil];
-    for (NSString* path in dirContents) {
-        BOOL isDir = NO;
-        NSString* fullPath = [basePath stringByAppendingPathComponent:path];
-        if (![fileManager fileExistsAtPath:fullPath isDirectory:&isDir] || isDir) {
-            continue;
-        }
-        
-        if ([[fullPath pathExtension] compare:@"db"] == 0) {
-            continue;
-        }
-        
-        if ([path compare:@"config"] == 0) {
-            continue;
-        }
-        
-        [myGameList addObject:path];
-    }
-    
-    [m_tableView reloadData];
 }
 
 -(void)onClickBack
@@ -188,12 +145,6 @@ extern int g_currentMB ;
     NSString* jsonString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
     NSArray* romArray = [jsonString objectFromJSONString];
     m_romData = [NSMutableArray arrayWithArray:romArray];
-    
-    NSMutableDictionary* myGame = [[NSMutableDictionary alloc]init];
-    NSMutableArray* myGameList = [[NSMutableArray alloc]init];
-    [myGame setObject:@"我的游戏" forKey:@"group"];
-    [myGame setObject:myGameList forKey:@"roms"];
-    [m_romData insertObject:myGame atIndex:0];
 
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSArray* array = [defaults arrayForKey:@"purchaseList"];
@@ -204,41 +155,32 @@ extern int g_currentMB ;
         m_purchaseList = [[NSMutableArray alloc]initWithArray:array];
     }
     
-    adView = [[AdMoGoView alloc] initWithAppKey:kMongoAppKey
-                                         adType:AdViewTypeNormalBanner expressMode:NO
-                             adMoGoViewDelegate:self];
-    adView.adWebBrowswerDelegate = self;
-    adView.frame = CGRectMake(0, 0, 320, 50);
-    adView.center = CGPointMake(self.view.bounds.size.width / 2, 25);
-    [self.view addSubview:adView];
-    // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appActivatedDidFinish:) name:kDJAppActivateDidFinish object:nil];
 }
 
-- (UIViewController *)viewControllerForPresentingModalView{
-    return self;
+-(void)adjustView:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    float width = self.view.bounds.size.width > self.view.bounds.size.height ? self.view.bounds.size.width : self.view.bounds.size.height;
+    float height = self.view.bounds.size.width > self.view.bounds.size.height ? self.view.bounds.size.height : self.view.bounds.size.width;
+    
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        m_tableView.frame = CGRectMake(0, 100, width, height - 100);
+        _banner.center = CGPointMake(width / 2, 25);
+    } else {
+        m_tableView.frame = CGRectMake(0, 100, height, width - 100);
+        _banner.center = CGPointMake(height / 2, 25);
+    }
 }
 
-- (void)adMoGoDidStartAd:(AdMoGoView *)adMoGoView{
-    NSLog(@"广告开始请求回调");
-} /**
-   * 广告接收成功回调
-   */
-- (void)adMoGoDidReceiveAd:(AdMoGoView *)adMoGoView{
-    NSLog(@"广告接收成功回调"); }
-/**
- * 广告接收失败回调 */
-- (void)adMoGoDidFailToReceiveAd:(AdMoGoView *)adMoGoView didFailWithError:(NSError *)error{
-    NSLog(@"广告接收失败回调"); }
-/**
- * 点击广告回调 */
-- (void)adMoGoClickAd:(AdMoGoView *)adMoGoView{ NSLog(@"点击广告回调");
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self adjustView:toInterfaceOrientation];
+    [m_tableView reloadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self onClickRefresh];
 }
 
 - (void)viewDidUnload
@@ -250,7 +192,17 @@ extern int g_currentMB ;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (YES);
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -266,11 +218,7 @@ extern int g_currentMB ;
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return @"将自己的游戏Rom通过手机助手上传到游戏的Documents文件夹下";
-    } else {
-        return @"";
-    }
+    return @"";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -284,10 +232,6 @@ extern int g_currentMB ;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        return 44;
-    }
-
     if (isPad()) {
         return 120;
     } else {
@@ -299,136 +243,140 @@ extern int g_currentMB ;
 {
     UITableViewCell* cell = nil;
     
-    if (indexPath.section == 0) {
-        static NSString* cellIdent = @"MyCellGame";
-        cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
-        
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
-            cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        }
+    CGRect rectImage = CGRectMake(2, 10, 57, 57);
+    CGRect rectName = CGRectMake(60, 5, 110, 20);
+    CGRect rectIntro = CGRectMake(60, 30, 230, 50);
+    CGRect rectRate = CGRectMake(220, 0, 85, 15);
+    CGRect rectLock = CGRectMake(280, 5, 16, 16);
+    CGRect rectNew = CGRectMake(260, 55, 36, 16);
 
-        NSString* path = [[[m_romData objectAtIndex:0]objectForKey:@"roms"]objectAtIndex:indexPath.row];
-        cell.textLabel.text = path;
+    float fontSize = 14;
+    
+    if (isPad()) {
+        if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+            rectImage = CGRectMake(2, 10, 100, 100);
+            rectName = CGRectMake(120, 3, 220, 25);
+            rectIntro = CGRectMake(120, 30, 800, 80);
+            rectRate = CGRectMake(830, -5, 90, 30);
+            rectLock = CGRectMake(900, 5, 28, 28);
+            rectNew = CGRectMake(880, 80, 36, 16);
+        } else {
+            rectImage = CGRectMake(2, 10, 100, 100);
+            rectName = CGRectMake(120, 3, 220, 25);
+            rectIntro = CGRectMake(120, 30, 500, 80);
+            rectRate = CGRectMake(560, -5, 90, 30);
+            rectLock = CGRectMake(640, 5, 28, 28);
+            rectNew = CGRectMake(640, 80, 36, 16);
+        }
+        fontSize = 20;
+    } else {
+        if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+            rectImage = CGRectMake(2, 10, 57, 57);
+            rectName = CGRectMake(60, 5, 110, 20);
+            rectIntro = CGRectMake(60, 30, 400, 50);
+            rectRate = CGRectMake(360, 2, 85, 15);
+            rectLock = CGRectMake(440, 5, 16, 16);
+            rectNew = CGRectMake(410, 55, 36, 16);
+        }    
+    }
+
+    static NSString* cellIdent = @"MyCellSetting";
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdent];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        UIImageView* image = [[UIImageView alloc]initWithFrame:rectImage];
+        image.backgroundColor = [UIColor clearColor];
+        image.tag = 300;
+        UILabel* name = [[UILabel alloc]initWithFrame:rectName];
+        name.backgroundColor = [UIColor clearColor];
+        name.font = [UIFont systemFontOfSize:fontSize];
+        name.tag = 301;
+        UILabel* intro = [[UILabel alloc]initWithFrame:rectIntro];
+        intro.backgroundColor = [UIColor clearColor];
+        intro.font = [UIFont systemFontOfSize:fontSize - 2];
+        intro.textColor = [UIColor grayColor];
+        intro.numberOfLines = 0;
+        intro.tag = 302;
+        
+        TDBadgeView* newBadge = [[TDBadgeView alloc]initWithFrame:rectNew];
+        newBadge.radius = 9;
+        newBadge.badgeColor = [UIColor colorWithRed:0.197 green:0.592 blue:0.219 alpha:1.000];
+        [newBadge setParent:cell];
+        [newBadge setBadgeString:@"New"];
+        [newBadge setShowShadow:YES];
+        newBadge.tag = 305;
+        
+        DLStarRatingControl* rate = [[DLStarRatingControl alloc]initWithFrame:rectRate];
+        rate.tag = 303;
+        
+        UIImageView* imgLock = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gui_lock"]];
+        imgLock.frame = rectLock;
+        imgLock.tag = 304;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        [cell.contentView addSubview:image];
+        [cell.contentView addSubview:name];
+        [cell.contentView addSubview:intro];
+        [cell.contentView addSubview:rate];
+        [cell.contentView addSubview:imgLock];
+        [cell.contentView addSubview:newBadge];
+        
+        //为视图增加边框
+        image.layer.masksToBounds=YES;
+        image.layer.cornerRadius=10.0;
+        image.layer.borderWidth=1.5;
+        image.layer.borderColor=[[UIColor darkGrayColor] CGColor];
         
         cell.contentView.layer.masksToBounds=YES;
         cell.contentView.layer.cornerRadius=10.0;
         cell.contentView.layer.borderWidth=1.5;
         cell.contentView.layer.borderColor=[[UIColor darkGrayColor] CGColor];
-        return cell;
-    } else {
-        static NSString* cellIdent = @"MyCellSetting";
-        cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdent];
-            cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            cell.accessoryType = UITableViewCellAccessoryNone;
-            
-            CGRect rectImage = CGRectMake(2, 10, 57, 57);
-            CGRect rectName = CGRectMake(60, 5, 110, 20);
-            CGRect rectIntro = CGRectMake(60, 30, 230, 50);
-            CGRect rectRate = CGRectMake(180, 0, 90, 30);
-            CGRect rectLock = CGRectMake(280, 5, 16, 16);
-            CGRect rectNew = CGRectMake(260, 55, 36, 16);
-            float fontSize = 14;
-            
-            if (isPad()) {
-                rectImage = CGRectMake(2, 10, 100, 100);
-                rectName = CGRectMake(120, 3, 220, 25);
-                rectIntro = CGRectMake(120, 30, 500, 80);
-                rectRate = CGRectMake(200, -5, 90, 30);
-                rectLock = CGRectMake(640, 5, 28, 28);
-                rectNew = CGRectMake(640, 80, 36, 16);
-                fontSize = 20;
-            }
-            
-            UIImageView* image = [[UIImageView alloc]initWithFrame:rectImage];
-            image.backgroundColor = [UIColor clearColor];
-            image.tag = 300;
-            UILabel* name = [[UILabel alloc]initWithFrame:rectName];
-            name.backgroundColor = [UIColor clearColor];
-            name.font = [UIFont systemFontOfSize:fontSize];
-            name.tag = 301;
-            UILabel* intro = [[UILabel alloc]initWithFrame:rectIntro];
-            intro.backgroundColor = [UIColor clearColor];
-            intro.font = [UIFont systemFontOfSize:fontSize - 2];
-            intro.textColor = [UIColor grayColor];
-            intro.numberOfLines = 0;
-            intro.tag = 302;
-            
-            TDBadgeView* newBadge = [[TDBadgeView alloc]initWithFrame:rectNew];
-            newBadge.radius = 9;
-            newBadge.badgeColor = [UIColor colorWithRed:0.197 green:0.592 blue:0.219 alpha:1.000];
-            [newBadge setParent:cell];
-            [newBadge setBadgeString:@"New"];
-            [newBadge setShowShadow:YES];
-            newBadge.tag = 305;
-            
-            DLStarRatingControl* rate = [[DLStarRatingControl alloc]initWithFrame:rectRate];
-            rate.autoresizingMask =  UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-            rate.tag = 303;
-            
-            UIImageView* imgLock = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gui_lock"]];
-            imgLock.frame = rectLock;
-            imgLock.tag = 304;
-            
-            cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            [cell.contentView addSubview:image];
-            [cell.contentView addSubview:name];
-            [cell.contentView addSubview:intro];
-            [cell.contentView addSubview:rate];
-            [cell.contentView addSubview:imgLock];
-            [cell.contentView addSubview:newBadge];
-            
-            //为视图增加边框
-            image.layer.masksToBounds=YES;
-            image.layer.cornerRadius=10.0;
-            image.layer.borderWidth=1.5;
-            image.layer.borderColor=[[UIColor darkGrayColor] CGColor];
-            
-            cell.contentView.layer.masksToBounds=YES;
-            cell.contentView.layer.cornerRadius=10.0;
-            cell.contentView.layer.borderWidth=1.5;
-            cell.contentView.layer.borderColor=[[UIColor darkGrayColor] CGColor];
-        }
-
-        UIImageView* icon = (UIImageView*)[cell.contentView viewWithTag:300];
-        UILabel* displayName = (UILabel*)[cell.contentView viewWithTag:301];
-        UILabel* intro = (UILabel*)[cell.contentView viewWithTag:302];
-        DLStarRatingControl* rate = (DLStarRatingControl*)[cell.contentView viewWithTag:303];
-        UIImageView* imgLock = (UIImageView*)[cell.contentView viewWithTag:304];
-        TDBadgeView* imgNew = (TDBadgeView*)[cell.contentView viewWithTag:305];
-
-        NSDictionary* dict = [[[m_romData objectAtIndex:indexPath.section]objectForKey:@"roms"]objectAtIndex:indexPath.row];
-        NSString* romPath = [dict objectForKey:@"rom"];
-        
-#if 0
-        NSString* fullPath = [[[NSBundle mainBundle]bundlePath]stringByAppendingPathComponent:romPath];
-        BOOL isDir = NO;
-        if (![[NSFileManager defaultManager]fileExistsAtPath:fullPath isDirectory:&isDir]) {
-            NSLog(@"file not found: %@", romPath);
-        }
-#endif
-        
-        if (romPath == nil) {
-            displayName.textColor = [UIColor grayColor];
-        }
-
-        NSString* fileName = [[romPath stringByDeletingPathExtension]stringByDeletingPathExtension];
-        icon.image = [UIImage imageNamed:[fileName stringByAppendingPathExtension:@"png"]];
-        if (icon.image == nil) {
-            icon.image = [UIImage imageNamed:[fileName stringByAppendingPathExtension:@"jpg"]];
-        }
-        displayName.text = [dict objectForKey:@"name"];
-        intro.text = [dict objectForKey:@"intro"];
-        float rateNum = [[dict objectForKey:@"star"]floatValue];
-        rate.rating = rateNum;
-        bool isNew = [[dict objectForKey:@"new"]intValue] != 0;
-        imgNew.hidden = !isNew;
-        
-        imgLock.hidden = [self isRomPurchase:indexPath notify:NO];
     }
+
+    UIImageView* icon = (UIImageView*)[cell.contentView viewWithTag:300];
+    icon.frame = rectImage;
+    UILabel* displayName = (UILabel*)[cell.contentView viewWithTag:301];
+    displayName.frame = rectName;
+    UILabel* intro = (UILabel*)[cell.contentView viewWithTag:302];
+    intro.frame = rectIntro;
+    DLStarRatingControl* rate = (DLStarRatingControl*)[cell.contentView viewWithTag:303];
+    rate.frame = rectRate;
+    UIImageView* imgLock = (UIImageView*)[cell.contentView viewWithTag:304];
+    imgLock.frame = rectLock;
+    TDBadgeView* imgNew = (TDBadgeView*)[cell.contentView viewWithTag:305];
+    imgNew.frame = rectNew;
+
+    NSDictionary* dict = [[[m_romData objectAtIndex:indexPath.section]objectForKey:@"roms"]objectAtIndex:indexPath.row];
+    NSString* romPath = [dict objectForKey:@"rom"];
+    
+#if 0
+    NSString* fullPath = [[[NSBundle mainBundle]bundlePath]stringByAppendingPathComponent:romPath];
+    BOOL isDir = NO;
+    if (![[NSFileManager defaultManager]fileExistsAtPath:fullPath isDirectory:&isDir]) {
+        NSLog(@"file not found: %@", romPath);
+    }
+#endif
+    
+    if (romPath == nil) {
+        displayName.textColor = [UIColor grayColor];
+    }
+
+    NSString* fileName = [[romPath stringByDeletingPathExtension]stringByDeletingPathExtension];
+    icon.image = [UIImage imageNamed:[fileName stringByAppendingPathExtension:@"png"]];
+    if (icon.image == nil) {
+        icon.image = [UIImage imageNamed:[fileName stringByAppendingPathExtension:@"jpg"]];
+    }
+    displayName.text = [dict objectForKey:@"name"];
+    intro.text = [dict objectForKey:@"intro"];
+    float rateNum = [[dict objectForKey:@"star"]floatValue];
+    rate.rating = rateNum;
+    bool isNew = [[dict objectForKey:@"new"]intValue] != 0;
+    imgNew.hidden = !isNew;
+    
+    imgLock.hidden = [self isRomPurchase:indexPath notify:NO];
     
     return cell;
 }
@@ -440,8 +388,9 @@ extern int g_currentMB ;
     return NO;
 }
 
-- (void)appActivatedDidFinish:(NSDictionary *)resultDic
+- (void)appActivatedDidFinish:(NSNotification *)notice;
 {
+    NSDictionary* resultDic = [notice object];
     NSLog(@"%@", resultDic);
     NSNumber *result = [resultDic objectForKey:@"result"];
     if ([result boolValue]) {
@@ -474,7 +423,7 @@ extern int g_currentMB ;
     }
     
     if (notify) {
-        NSString* title = [NSString stringWithFormat:@"消耗10M币解锁此游戏，或者消耗70M币解锁全部游戏。您可以通过安装精品推荐应用的方式免费获取M币，当前M币:%d", g_currentMB];
+        NSString* title = [NSString stringWithFormat:@"消耗10M币解锁此游戏，或者消耗150M币解锁全部游戏。您可以通过安装精品推荐应用的方式免费获取M币，当前M币:%d", g_currentMB];
         UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:title delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:@"解锁", @"解锁全部", @"获取M币", nil];
         alert.tag = 600;
         [alert show];
@@ -521,13 +470,13 @@ extern int g_currentMB ;
                 [m_tableView reloadData];
             }
         } else if (buttonIndex == 2) {
-            if (g_currentMB < 70) {
+            if (g_currentMB < 150) {
                 [MobClick event:@"purchaseall" label:@"false"];
                 UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"错误" message:[NSString stringWithFormat:@"M币不足，当前M币:%d",g_currentMB] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil];
                 [alert show];
             } else {
                 [MobClick event:@"purchaseall" label:@"true"];
-                g_currentMB -= 70;
+                g_currentMB -= 150;
                 [self updateMBInfo];
 
                 [[NSUserDefaults standardUserDefaults] setObject:[[UIDevice currentDevice] uniqueDeviceIdentifier] forKey:kRemoveAdsFlag];
@@ -552,20 +501,15 @@ extern void startGameFromMenu();
     
     NSString* romPath = nil;
     BOOL isUserRom = NO;
-    if (indexPath.section == 0) {
-        romPath = [[[m_romData objectAtIndex:indexPath.section]objectForKey:@"roms"]objectAtIndex:indexPath.row];
-        isUserRom = YES;
-    } else {
-        NSDictionary* dict = [[[m_romData objectAtIndex:indexPath.section]objectForKey:@"roms"]objectAtIndex:indexPath.row];
-        romPath = [dict objectForKey:@"rom"];
-        isUserRom = NO;
-    }
+    NSDictionary* dict = [[[m_romData objectAtIndex:indexPath.section]objectForKey:@"roms"]objectAtIndex:indexPath.row];
+    romPath = [dict objectForKey:@"rom"];
+    isUserRom = NO;
     
     [MobClick event:@"openrom" label:romPath];
     
     m_currentSelectRom = romPath;
     
-    if (indexPath.section != 0 && ![self isRomPurchase:indexPath notify:YES]) {
+    if (![self isRomPurchase:indexPath notify:YES]) {
         return;
     }
     

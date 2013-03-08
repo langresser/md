@@ -83,7 +83,42 @@ int g_currentMB = 0;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
+//    if (isPad()) {
+//        return interfaceOrientation == UIInterfaceOrientationPortrait;
+//    } else {
+//        return (YES);   
+//    }
+}
+
+-(void)adjustView:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    float width = self.view.bounds.size.width > self.view.bounds.size.height ? self.view.bounds.size.width : self.view.bounds.size.height;
+    float height = self.view.bounds.size.width > self.view.bounds.size.height ? self.view.bounds.size.height : self.view.bounds.size.width;
+    
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        settingView.frame = CGRectMake(0, 0, width, height);
+        m_tableView.frame = CGRectMake(0, 50, width, height - 50);
+    } else {
+        settingView.frame = CGRectMake(0, 0, height, width);
+        m_tableView.frame = CGRectMake(0, 50, height, width - 50);
+    }
+}
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self adjustView:toInterfaceOrientation];
+    [m_tableView reloadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -150,7 +185,7 @@ int g_currentMB = 0;
     if (section == 0) {
         return 6;
     } else if (section == 1) {
-        return 3;
+        return 4;
     }
     return 0;
 }
@@ -283,7 +318,7 @@ int g_currentMB = 0;
         static NSString* cellIdent = @"MyCellGongl";
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
         if (!cell) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdent];
             cell.textLabel.font = [UIFont systemFontOfSize:17.0];
             cell.selectionStyle = UITableViewCellSelectionStyleGray;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -292,12 +327,19 @@ int g_currentMB = 0;
         switch (indexPath.row) {
             case 0:
                 cell.textLabel.text = @"意见反馈";
+                cell.detailTextLabel.text = @"此非即时通讯，您可以通过微博与我们联系";
                 break;
             case 1:
-                cell.textLabel.text = @"论坛交流";
+                cell.textLabel.text = @"新浪微博(@BananaStudio)";
+                cell.detailTextLabel.text = @"关注我们，了解最新游戏发布及版本更新";
                 break;
             case 2:
+                cell.textLabel.text = @"腾讯微博(@BananaStudio)";
+                cell.detailTextLabel.text = @"关注我们，了解最新游戏发布及版本更新";
+                break;
+            case 3:
                 cell.textLabel.text = @"精品推荐";
+                cell.detailTextLabel.text = @"";
                 break;
             default:
                 break;
@@ -349,29 +391,18 @@ int g_currentMB = 0;
                 [UMFeedback showFeedback:self withAppkey:kUmengAppKey];
                 break;
             case 1:
-                openWebsite("http://bananastudio.cn/bbs/forum.php");
+                openWebsite("http://weibo.com/bananastudi0");
                 break;
             case 2:
+                openWebsite("http://t.qq.com/BananaStudio");
+                break;
+            case 3:
                 [[DianJinOfferPlatform defaultPlatform]showOfferWall: self delegate:self];
                 break;
                 break;
             default:
                 break;
         }
-    }
-}
-
-- (void)appActivatedDidFinish:(NSDictionary *)resultDic
-{
-    NSLog(@"%@", resultDic);
-    NSNumber *result = [resultDic objectForKey:@"result"];
-    if ([result boolValue]) {
-        NSNumber *awardAmount = [resultDic objectForKey:@"awardAmount"];
-        NSString *identifier = [resultDic objectForKey:@"identifier"];
-        NSLog(@"app identifier = %@", identifier);
-        g_currentMB += [awardAmount floatValue];
-        [[NSUserDefaults standardUserDefaults]setInteger:g_currentMB forKey:@"MB"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
     }
 }
 
