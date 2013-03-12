@@ -588,30 +588,47 @@ UIImageView* pauseImage;
 
 - (void)orientationChanged:(NSNotification *)notification
 {
+    uint o = iOSOrientationToGfx([[UIDevice currentDevice] orientation]);
+	if(o == 255)
+		return;
+    
+    if(o != Gfx::VIEW_ROTATE_180)
+	{
+        extern int g_rotation;
+        if (g_rotation) {
+            switch (o) {
+                case Gfx::VIEW_ROTATE_0:
+                case Gfx::VIEW_ROTATE_90:
+                case Gfx::VIEW_ROTATE_270:
+                    pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, 0, 60, 60);
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            switch (o) {
+                case Gfx::VIEW_ROTATE_90:
+                    pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, glView.bounds.size.height - 60, 60, 60);
+                    break;
+                case Gfx::VIEW_ROTATE_270:
+                    pauseImage.frame = CGRectMake(0, 0, 60, 60);
+                    break;
+                case Gfx::VIEW_ROTATE_0:
+                    pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, glView.bounds.size.height - 60, 60, 60);
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+	}
+    
     if (openglViewIsInit == 0) {
         return;
     }
 
-	uint o = iOSOrientationToGfx([[UIDevice currentDevice] orientation]);
-	if(o == 255)
-		return;
-
 	if(o != Gfx::VIEW_ROTATE_180)
 	{
-        switch (o) {
-            case Gfx::VIEW_ROTATE_90:
-                pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, glView.bounds.size.height - 60, 60, 60);
-                break;
-            case Gfx::VIEW_ROTATE_270:
-                pauseImage.frame = CGRectMake(0, 0, 60, 60);
-                break;
-            case Gfx::VIEW_ROTATE_0:
-                pauseImage.frame = CGRectMake(glView.bounds.size.width - 60, 0, 60, 60);
-                break;
-            default:
-                break;
-        }
-
 		logMsg("new orientation %s", Gfx::orientationName(o));
 		Gfx::preferedOrientation = o;
 		Gfx::setOrientation(Gfx::preferedOrientation);
