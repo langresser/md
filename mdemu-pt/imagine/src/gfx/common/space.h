@@ -1,6 +1,7 @@
 #pragma once
 
 #include <gfx/defs.hh>
+extern int g_rotation;
 
 namespace Gfx
 {
@@ -37,7 +38,11 @@ uint setValidOrientations(uint oMask, bool manageAutoOrientation)
 {
 	if(oMask == VIEW_ROTATE_AUTO)
 	{
-		oMask = VIEW_ROTATE_0 | VIEW_ROTATE_90 | VIEW_ROTATE_270;
+        if (g_rotation == 0) {
+            oMask = VIEW_ROTATE_90 | VIEW_ROTATE_270;
+        } else {
+            oMask = VIEW_ROTATE_0;
+        }
 	}
 	else
 	{

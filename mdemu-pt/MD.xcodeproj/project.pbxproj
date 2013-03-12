@@ -246,58 +246,58 @@
 		856BDEFA16E9AF1C00C9BC68 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856BDE9716E9AF1C00C9BC68 /* libMobClickLibrary.a */; };
 		856BDEFB16E9AF1C00C9BC68 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856BDE9816E9AF1C00C9BC68 /* libUMFeedback.a */; };
 		856BDEFC16E9AF1C00C9BC68 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 856BDE9A16E9AF1C00C9BC68 /* umFeedback.bundle */; };
-		8574FA0A16E9C20A00C5C445 /* 三国志5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9D616E9C20A00C5C445 /* 三国志5.png */; };
-		8574FA0B16E9C20A00C5C445 /* 三国志5.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9D716E9C20A00C5C445 /* 三国志5.smd.zip */; };
-		8574FA0C16E9C20A00C5C445 /* 光明力量2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9D816E9C20A00C5C445 /* 光明力量2.png */; };
-		8574FA0D16E9C20A00C5C445 /* 光明力量2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9D916E9C20A00C5C445 /* 光明力量2.smd.zip */; };
-		8574FA0E16E9C20A00C5C445 /* 双截龙3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DA16E9C20A00C5C445 /* 双截龙3.bin.zip */; };
-		8574FA0F16E9C20A00C5C445 /* 双截龙3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DB16E9C20A00C5C445 /* 双截龙3.png */; };
-		8574FA1016E9C20A00C5C445 /* 吞食天地3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DC16E9C20A00C5C445 /* 吞食天地3.png */; };
-		8574FA1116E9C20A00C5C445 /* 吞食天地3.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DD16E9C20A00C5C445 /* 吞食天地3.smd.zip */; };
-		8574FA1216E9C20A00C5C445 /* 外星战士.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DE16E9C20A00C5C445 /* 外星战士.bin.zip */; };
-		8574FA1316E9C20A00C5C445 /* 外星战士.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9DF16E9C20A00C5C445 /* 外星战士.png */; };
-		8574FA1416E9C20A00C5C445 /* 大战略.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E016E9C20A00C5C445 /* 大战略.bin.zip */; };
-		8574FA1516E9C20A00C5C445 /* 大战略.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E116E9C20A00C5C445 /* 大战略.png */; };
-		8574FA1616E9C20A00C5C445 /* 幽游白书.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E216E9C20A00C5C445 /* 幽游白书.png */; };
-		8574FA1716E9C20A00C5C445 /* 幽游白书.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E316E9C20A00C5C445 /* 幽游白书.smd.zip */; };
-		8574FA1816E9C20A00C5C445 /* 怒之铁拳3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E416E9C20A00C5C445 /* 怒之铁拳3.bin.zip */; };
-		8574FA1916E9C20A00C5C445 /* 怒之铁拳3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E516E9C20A00C5C445 /* 怒之铁拳3.png */; };
-		8574FA1A16E9C20A00C5C445 /* 梦幻之星4.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E616E9C20A00C5C445 /* 梦幻之星4.bin.zip */; };
-		8574FA1B16E9C20A00C5C445 /* 梦幻之星4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E716E9C20A00C5C445 /* 梦幻之星4.png */; };
-		8574FA1C16E9C20A00C5C445 /* 梦幻模拟战2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E816E9C20A00C5C445 /* 梦幻模拟战2.png */; };
-		8574FA1D16E9C20A00C5C445 /* 梦幻模拟战2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9E916E9C20A00C5C445 /* 梦幻模拟战2.smd.zip */; };
-		8574FA1E16E9C20A00C5C445 /* 洛克人.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9EA16E9C20A00C5C445 /* 洛克人.bin.zip */; };
-		8574FA1F16E9C20A00C5C445 /* 洛克人.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9EB16E9C20A00C5C445 /* 洛克人.png */; };
-		8574FA2016E9C20A00C5C445 /* 灌篮高手.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9EC16E9C20A00C5C445 /* 灌篮高手.png */; };
-		8574FA2116E9C20A00C5C445 /* 灌篮高手.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9ED16E9C20A00C5C445 /* 灌篮高手.smd.zip */; };
-		8574FA2216E9C20A00C5C445 /* 火枪英雄.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9EE16E9C20A00C5C445 /* 火枪英雄.bin.zip */; };
-		8574FA2316E9C20A00C5C445 /* 火枪英雄.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9EF16E9C20A00C5C445 /* 火枪英雄.jpg */; };
-		8574FA2416E9C20A00C5C445 /* 火箭骑士.gen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F016E9C20A00C5C445 /* 火箭骑士.gen.zip */; };
-		8574FA2516E9C20A00C5C445 /* 火箭骑士.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F116E9C20A00C5C445 /* 火箭骑士.png */; };
-		8574FA2616E9C20A00C5C445 /* 炸弹人.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F216E9C20A00C5C445 /* 炸弹人.bin.zip */; };
-		8574FA2716E9C20A00C5C445 /* 炸弹人.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F316E9C20A00C5C445 /* 炸弹人.jpg */; };
-		8574FA2816E9C20A00C5C445 /* 热血足球.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F416E9C20A00C5C445 /* 热血足球.bin.zip */; };
-		8574FA2916E9C20A00C5C445 /* 热血足球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F516E9C20A00C5C445 /* 热血足球.jpg */; };
-		8574FA2A16E9C20A00C5C445 /* 秘境魔宝中文版.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F616E9C20A00C5C445 /* 秘境魔宝中文版.png */; };
-		8574FA2B16E9C20A00C5C445 /* 秘境魔宝中文版.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F716E9C20A00C5C445 /* 秘境魔宝中文版.smd.zip */; };
-		8574FA2C16E9C20A00C5C445 /* 究极七龙珠.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F816E9C20A00C5C445 /* 究极七龙珠.bin.zip */; };
-		8574FA2D16E9C20A00C5C445 /* 究极七龙珠.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9F916E9C20A00C5C445 /* 究极七龙珠.png */; };
-		8574FA2E16E9C20A00C5C445 /* 粒子斗士2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FA16E9C20A00C5C445 /* 粒子斗士2.png */; };
-		8574FA2F16E9C20A00C5C445 /* 粒子斗士2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FB16E9C20A00C5C445 /* 粒子斗士2.smd.zip */; };
-		8574FA3016E9C20A00C5C445 /* 联合前线汉化版.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FC16E9C20A00C5C445 /* 联合前线汉化版.png */; };
-		8574FA3116E9C20A00C5C445 /* 联合前线汉化版.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FD16E9C20A00C5C445 /* 联合前线汉化版.smd.zip */; };
-		8574FA3216E9C20A00C5C445 /* 蚯蚓吉姆2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FE16E9C20A00C5C445 /* 蚯蚓吉姆2.png */; };
-		8574FA3316E9C20A00C5C445 /* 蚯蚓吉姆2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574F9FF16E9C20A00C5C445 /* 蚯蚓吉姆2.smd.zip */; };
-		8574FA3416E9C20A00C5C445 /* 街霸2.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0016E9C20A00C5C445 /* 街霸2.bin.zip */; };
-		8574FA3516E9C20A00C5C445 /* 街霸2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0116E9C20A00C5C445 /* 街霸2.png */; };
-		8574FA3616E9C20A00C5C445 /* 超级忍3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0216E9C20A00C5C445 /* 超级忍3.bin.zip */; };
-		8574FA3716E9C20A00C5C445 /* 超级忍3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0316E9C20A00C5C445 /* 超级忍3.png */; };
-		8574FA3816E9C20A00C5C445 /* 音速小子3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0416E9C20A00C5C445 /* 音速小子3.bin.zip */; };
-		8574FA3916E9C20A00C5C445 /* 音速小子3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0516E9C20A00C5C445 /* 音速小子3.png */; };
-		8574FA3A16E9C20A00C5C445 /* 饿狼传说.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0616E9C20A00C5C445 /* 饿狼传说.bin.zip */; };
-		8574FA3B16E9C20A00C5C445 /* 饿狼传说.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0716E9C20A00C5C445 /* 饿狼传说.png */; };
-		8574FA3C16E9C20A00C5C445 /* 魂斗罗4铁血兵团.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0816E9C20A00C5C445 /* 魂斗罗4铁血兵团.bin.zip */; };
-		8574FA3D16E9C20A00C5C445 /* 魂斗罗4铁血兵团.png in Resources */ = {isa = PBXBuildFile; fileRef = 8574FA0916E9C20A00C5C445 /* 魂斗罗4铁血兵团.png */; };
+		85914F6916EEE66E00E188D5 /* 三国志5.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3516EEE66D00E188D5 /* 三国志5.png */; };
+		85914F6A16EEE66E00E188D5 /* 三国志5.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3616EEE66D00E188D5 /* 三国志5.smd.zip */; };
+		85914F6B16EEE66E00E188D5 /* 光明力量2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3716EEE66D00E188D5 /* 光明力量2.png */; };
+		85914F6C16EEE66E00E188D5 /* 光明力量2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3816EEE66D00E188D5 /* 光明力量2.smd.zip */; };
+		85914F6D16EEE66E00E188D5 /* 双截龙3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3916EEE66D00E188D5 /* 双截龙3.bin.zip */; };
+		85914F6E16EEE66E00E188D5 /* 双截龙3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3A16EEE66D00E188D5 /* 双截龙3.png */; };
+		85914F6F16EEE66E00E188D5 /* 吞食天地3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3B16EEE66D00E188D5 /* 吞食天地3.png */; };
+		85914F7016EEE66E00E188D5 /* 吞食天地3.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3C16EEE66D00E188D5 /* 吞食天地3.smd.zip */; };
+		85914F7116EEE66E00E188D5 /* 外星战士.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3D16EEE66D00E188D5 /* 外星战士.bin.zip */; };
+		85914F7216EEE66E00E188D5 /* 外星战士.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3E16EEE66D00E188D5 /* 外星战士.png */; };
+		85914F7316EEE66E00E188D5 /* 大战略.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F3F16EEE66D00E188D5 /* 大战略.bin.zip */; };
+		85914F7416EEE66E00E188D5 /* 大战略.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4016EEE66D00E188D5 /* 大战略.png */; };
+		85914F7516EEE66E00E188D5 /* 幽游白书.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4116EEE66D00E188D5 /* 幽游白书.png */; };
+		85914F7616EEE66E00E188D5 /* 幽游白书.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4216EEE66D00E188D5 /* 幽游白书.smd.zip */; };
+		85914F7716EEE66E00E188D5 /* 怒之铁拳3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4316EEE66D00E188D5 /* 怒之铁拳3.bin.zip */; };
+		85914F7816EEE66E00E188D5 /* 怒之铁拳3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4416EEE66D00E188D5 /* 怒之铁拳3.png */; };
+		85914F7916EEE66E00E188D5 /* 梦幻之星4.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4516EEE66D00E188D5 /* 梦幻之星4.bin.zip */; };
+		85914F7A16EEE66E00E188D5 /* 梦幻之星4.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4616EEE66D00E188D5 /* 梦幻之星4.png */; };
+		85914F7B16EEE66E00E188D5 /* 梦幻模拟战2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4716EEE66D00E188D5 /* 梦幻模拟战2.png */; };
+		85914F7C16EEE66E00E188D5 /* 梦幻模拟战2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4816EEE66D00E188D5 /* 梦幻模拟战2.smd.zip */; };
+		85914F7D16EEE66E00E188D5 /* 洛克人.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4916EEE66D00E188D5 /* 洛克人.bin.zip */; };
+		85914F7E16EEE66E00E188D5 /* 洛克人.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4A16EEE66D00E188D5 /* 洛克人.png */; };
+		85914F7F16EEE66E00E188D5 /* 灌篮高手.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4B16EEE66D00E188D5 /* 灌篮高手.png */; };
+		85914F8016EEE66E00E188D5 /* 灌篮高手.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4C16EEE66D00E188D5 /* 灌篮高手.smd.zip */; };
+		85914F8116EEE66E00E188D5 /* 火枪英雄.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4D16EEE66D00E188D5 /* 火枪英雄.bin.zip */; };
+		85914F8216EEE66E00E188D5 /* 火枪英雄.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4E16EEE66D00E188D5 /* 火枪英雄.jpg */; };
+		85914F8316EEE66E00E188D5 /* 火箭骑士.gen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F4F16EEE66D00E188D5 /* 火箭骑士.gen.zip */; };
+		85914F8416EEE66E00E188D5 /* 火箭骑士.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5016EEE66D00E188D5 /* 火箭骑士.png */; };
+		85914F8516EEE66E00E188D5 /* 炸弹人.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5116EEE66D00E188D5 /* 炸弹人.bin.zip */; };
+		85914F8616EEE66E00E188D5 /* 炸弹人.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5216EEE66D00E188D5 /* 炸弹人.jpg */; };
+		85914F8716EEE66E00E188D5 /* 热血足球.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5316EEE66D00E188D5 /* 热血足球.bin.zip */; };
+		85914F8816EEE66E00E188D5 /* 热血足球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5416EEE66D00E188D5 /* 热血足球.jpg */; };
+		85914F8916EEE66E00E188D5 /* 秘境魔宝中文版.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5516EEE66D00E188D5 /* 秘境魔宝中文版.png */; };
+		85914F8A16EEE66E00E188D5 /* 秘境魔宝中文版.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5616EEE66D00E188D5 /* 秘境魔宝中文版.smd.zip */; };
+		85914F8B16EEE66E00E188D5 /* 究极七龙珠.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5716EEE66D00E188D5 /* 究极七龙珠.bin.zip */; };
+		85914F8C16EEE66E00E188D5 /* 究极七龙珠.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5816EEE66D00E188D5 /* 究极七龙珠.png */; };
+		85914F8D16EEE66E00E188D5 /* 粒子斗士2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5916EEE66D00E188D5 /* 粒子斗士2.png */; };
+		85914F8E16EEE66E00E188D5 /* 粒子斗士2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5A16EEE66D00E188D5 /* 粒子斗士2.smd.zip */; };
+		85914F8F16EEE66E00E188D5 /* 联合前线汉化版.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5B16EEE66D00E188D5 /* 联合前线汉化版.png */; };
+		85914F9016EEE66E00E188D5 /* 联合前线汉化版.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5C16EEE66D00E188D5 /* 联合前线汉化版.smd.zip */; };
+		85914F9116EEE66E00E188D5 /* 蚯蚓吉姆2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5D16EEE66D00E188D5 /* 蚯蚓吉姆2.png */; };
+		85914F9216EEE66E00E188D5 /* 蚯蚓吉姆2.smd.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5E16EEE66D00E188D5 /* 蚯蚓吉姆2.smd.zip */; };
+		85914F9316EEE66E00E188D5 /* 街霸2.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F5F16EEE66D00E188D5 /* 街霸2.bin.zip */; };
+		85914F9416EEE66E00E188D5 /* 街霸2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6016EEE66D00E188D5 /* 街霸2.png */; };
+		85914F9516EEE66E00E188D5 /* 超级忍3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6116EEE66D00E188D5 /* 超级忍3.bin.zip */; };
+		85914F9616EEE66E00E188D5 /* 超级忍3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6216EEE66D00E188D5 /* 超级忍3.png */; };
+		85914F9716EEE66E00E188D5 /* 音速小子3.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6316EEE66D00E188D5 /* 音速小子3.bin.zip */; };
+		85914F9816EEE66E00E188D5 /* 音速小子3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6416EEE66D00E188D5 /* 音速小子3.png */; };
+		85914F9916EEE66E00E188D5 /* 饿狼传说.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6516EEE66D00E188D5 /* 饿狼传说.bin.zip */; };
+		85914F9A16EEE66E00E188D5 /* 饿狼传说.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6616EEE66D00E188D5 /* 饿狼传说.png */; };
+		85914F9B16EEE66E00E188D5 /* 魂斗罗4铁血兵团.bin.zip in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6716EEE66D00E188D5 /* 魂斗罗4铁血兵团.bin.zip */; };
+		85914F9C16EEE66E00E188D5 /* 魂斗罗4铁血兵团.png in Resources */ = {isa = PBXBuildFile; fileRef = 85914F6816EEE66D00E188D5 /* 魂斗罗4铁血兵团.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -832,58 +832,58 @@
 		856BDE9A16E9AF1C00C9BC68 /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = umFeedback.bundle; path = lib/umFeedback.bundle; sourceTree = "<group>"; };
 		856BDE9B16E9AF1C00C9BC68 /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMFeedback.h; path = lib/UMFeedback.h; sourceTree = "<group>"; };
 		856BDF0916E9B0C400C9BC68 /* MDAll.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MDAll.entitlements; sourceTree = "<group>"; };
-		8574F9D616E9C20A00C5C445 /* 三国志5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三国志5.png"; sourceTree = "<group>"; };
-		8574F9D716E9C20A00C5C445 /* 三国志5.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "三国志5.smd.zip"; sourceTree = "<group>"; };
-		8574F9D816E9C20A00C5C445 /* 光明力量2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "光明力量2.png"; sourceTree = "<group>"; };
-		8574F9D916E9C20A00C5C445 /* 光明力量2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "光明力量2.smd.zip"; sourceTree = "<group>"; };
-		8574F9DA16E9C20A00C5C445 /* 双截龙3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "双截龙3.bin.zip"; sourceTree = "<group>"; };
-		8574F9DB16E9C20A00C5C445 /* 双截龙3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "双截龙3.png"; sourceTree = "<group>"; };
-		8574F9DC16E9C20A00C5C445 /* 吞食天地3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "吞食天地3.png"; sourceTree = "<group>"; };
-		8574F9DD16E9C20A00C5C445 /* 吞食天地3.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "吞食天地3.smd.zip"; sourceTree = "<group>"; };
-		8574F9DE16E9C20A00C5C445 /* 外星战士.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "外星战士.bin.zip"; sourceTree = "<group>"; };
-		8574F9DF16E9C20A00C5C445 /* 外星战士.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "外星战士.png"; sourceTree = "<group>"; };
-		8574F9E016E9C20A00C5C445 /* 大战略.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "大战略.bin.zip"; sourceTree = "<group>"; };
-		8574F9E116E9C20A00C5C445 /* 大战略.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大战略.png"; sourceTree = "<group>"; };
-		8574F9E216E9C20A00C5C445 /* 幽游白书.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "幽游白书.png"; sourceTree = "<group>"; };
-		8574F9E316E9C20A00C5C445 /* 幽游白书.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "幽游白书.smd.zip"; sourceTree = "<group>"; };
-		8574F9E416E9C20A00C5C445 /* 怒之铁拳3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "怒之铁拳3.bin.zip"; sourceTree = "<group>"; };
-		8574F9E516E9C20A00C5C445 /* 怒之铁拳3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "怒之铁拳3.png"; sourceTree = "<group>"; };
-		8574F9E616E9C20A00C5C445 /* 梦幻之星4.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "梦幻之星4.bin.zip"; sourceTree = "<group>"; };
-		8574F9E716E9C20A00C5C445 /* 梦幻之星4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "梦幻之星4.png"; sourceTree = "<group>"; };
-		8574F9E816E9C20A00C5C445 /* 梦幻模拟战2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "梦幻模拟战2.png"; sourceTree = "<group>"; };
-		8574F9E916E9C20A00C5C445 /* 梦幻模拟战2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "梦幻模拟战2.smd.zip"; sourceTree = "<group>"; };
-		8574F9EA16E9C20A00C5C445 /* 洛克人.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "洛克人.bin.zip"; sourceTree = "<group>"; };
-		8574F9EB16E9C20A00C5C445 /* 洛克人.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "洛克人.png"; sourceTree = "<group>"; };
-		8574F9EC16E9C20A00C5C445 /* 灌篮高手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "灌篮高手.png"; sourceTree = "<group>"; };
-		8574F9ED16E9C20A00C5C445 /* 灌篮高手.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "灌篮高手.smd.zip"; sourceTree = "<group>"; };
-		8574F9EE16E9C20A00C5C445 /* 火枪英雄.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "火枪英雄.bin.zip"; sourceTree = "<group>"; };
-		8574F9EF16E9C20A00C5C445 /* 火枪英雄.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "火枪英雄.jpg"; sourceTree = "<group>"; };
-		8574F9F016E9C20A00C5C445 /* 火箭骑士.gen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "火箭骑士.gen.zip"; sourceTree = "<group>"; };
-		8574F9F116E9C20A00C5C445 /* 火箭骑士.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火箭骑士.png"; sourceTree = "<group>"; };
-		8574F9F216E9C20A00C5C445 /* 炸弹人.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "炸弹人.bin.zip"; sourceTree = "<group>"; };
-		8574F9F316E9C20A00C5C445 /* 炸弹人.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "炸弹人.jpg"; sourceTree = "<group>"; };
-		8574F9F416E9C20A00C5C445 /* 热血足球.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "热血足球.bin.zip"; sourceTree = "<group>"; };
-		8574F9F516E9C20A00C5C445 /* 热血足球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "热血足球.jpg"; sourceTree = "<group>"; };
-		8574F9F616E9C20A00C5C445 /* 秘境魔宝中文版.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "秘境魔宝中文版.png"; sourceTree = "<group>"; };
-		8574F9F716E9C20A00C5C445 /* 秘境魔宝中文版.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "秘境魔宝中文版.smd.zip"; sourceTree = "<group>"; };
-		8574F9F816E9C20A00C5C445 /* 究极七龙珠.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "究极七龙珠.bin.zip"; sourceTree = "<group>"; };
-		8574F9F916E9C20A00C5C445 /* 究极七龙珠.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "究极七龙珠.png"; sourceTree = "<group>"; };
-		8574F9FA16E9C20A00C5C445 /* 粒子斗士2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "粒子斗士2.png"; sourceTree = "<group>"; };
-		8574F9FB16E9C20A00C5C445 /* 粒子斗士2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "粒子斗士2.smd.zip"; sourceTree = "<group>"; };
-		8574F9FC16E9C20A00C5C445 /* 联合前线汉化版.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联合前线汉化版.png"; sourceTree = "<group>"; };
-		8574F9FD16E9C20A00C5C445 /* 联合前线汉化版.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "联合前线汉化版.smd.zip"; sourceTree = "<group>"; };
-		8574F9FE16E9C20A00C5C445 /* 蚯蚓吉姆2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蚯蚓吉姆2.png"; sourceTree = "<group>"; };
-		8574F9FF16E9C20A00C5C445 /* 蚯蚓吉姆2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "蚯蚓吉姆2.smd.zip"; sourceTree = "<group>"; };
-		8574FA0016E9C20A00C5C445 /* 街霸2.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "街霸2.bin.zip"; sourceTree = "<group>"; };
-		8574FA0116E9C20A00C5C445 /* 街霸2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "街霸2.png"; sourceTree = "<group>"; };
-		8574FA0216E9C20A00C5C445 /* 超级忍3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "超级忍3.bin.zip"; sourceTree = "<group>"; };
-		8574FA0316E9C20A00C5C445 /* 超级忍3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "超级忍3.png"; sourceTree = "<group>"; };
-		8574FA0416E9C20A00C5C445 /* 音速小子3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "音速小子3.bin.zip"; sourceTree = "<group>"; };
-		8574FA0516E9C20A00C5C445 /* 音速小子3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "音速小子3.png"; sourceTree = "<group>"; };
-		8574FA0616E9C20A00C5C445 /* 饿狼传说.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "饿狼传说.bin.zip"; sourceTree = "<group>"; };
-		8574FA0716E9C20A00C5C445 /* 饿狼传说.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "饿狼传说.png"; sourceTree = "<group>"; };
-		8574FA0816E9C20A00C5C445 /* 魂斗罗4铁血兵团.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "魂斗罗4铁血兵团.bin.zip"; sourceTree = "<group>"; };
-		8574FA0916E9C20A00C5C445 /* 魂斗罗4铁血兵团.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "魂斗罗4铁血兵团.png"; sourceTree = "<group>"; };
+		85914F3516EEE66D00E188D5 /* 三国志5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三国志5.png"; sourceTree = "<group>"; };
+		85914F3616EEE66D00E188D5 /* 三国志5.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "三国志5.smd.zip"; sourceTree = "<group>"; };
+		85914F3716EEE66D00E188D5 /* 光明力量2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "光明力量2.png"; sourceTree = "<group>"; };
+		85914F3816EEE66D00E188D5 /* 光明力量2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "光明力量2.smd.zip"; sourceTree = "<group>"; };
+		85914F3916EEE66D00E188D5 /* 双截龙3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "双截龙3.bin.zip"; sourceTree = "<group>"; };
+		85914F3A16EEE66D00E188D5 /* 双截龙3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "双截龙3.png"; sourceTree = "<group>"; };
+		85914F3B16EEE66D00E188D5 /* 吞食天地3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "吞食天地3.png"; sourceTree = "<group>"; };
+		85914F3C16EEE66D00E188D5 /* 吞食天地3.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "吞食天地3.smd.zip"; sourceTree = "<group>"; };
+		85914F3D16EEE66D00E188D5 /* 外星战士.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "外星战士.bin.zip"; sourceTree = "<group>"; };
+		85914F3E16EEE66D00E188D5 /* 外星战士.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "外星战士.png"; sourceTree = "<group>"; };
+		85914F3F16EEE66D00E188D5 /* 大战略.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "大战略.bin.zip"; sourceTree = "<group>"; };
+		85914F4016EEE66D00E188D5 /* 大战略.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大战略.png"; sourceTree = "<group>"; };
+		85914F4116EEE66D00E188D5 /* 幽游白书.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "幽游白书.png"; sourceTree = "<group>"; };
+		85914F4216EEE66D00E188D5 /* 幽游白书.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "幽游白书.smd.zip"; sourceTree = "<group>"; };
+		85914F4316EEE66D00E188D5 /* 怒之铁拳3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "怒之铁拳3.bin.zip"; sourceTree = "<group>"; };
+		85914F4416EEE66D00E188D5 /* 怒之铁拳3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "怒之铁拳3.png"; sourceTree = "<group>"; };
+		85914F4516EEE66D00E188D5 /* 梦幻之星4.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "梦幻之星4.bin.zip"; sourceTree = "<group>"; };
+		85914F4616EEE66D00E188D5 /* 梦幻之星4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "梦幻之星4.png"; sourceTree = "<group>"; };
+		85914F4716EEE66D00E188D5 /* 梦幻模拟战2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "梦幻模拟战2.png"; sourceTree = "<group>"; };
+		85914F4816EEE66D00E188D5 /* 梦幻模拟战2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "梦幻模拟战2.smd.zip"; sourceTree = "<group>"; };
+		85914F4916EEE66D00E188D5 /* 洛克人.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "洛克人.bin.zip"; sourceTree = "<group>"; };
+		85914F4A16EEE66D00E188D5 /* 洛克人.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "洛克人.png"; sourceTree = "<group>"; };
+		85914F4B16EEE66D00E188D5 /* 灌篮高手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "灌篮高手.png"; sourceTree = "<group>"; };
+		85914F4C16EEE66D00E188D5 /* 灌篮高手.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "灌篮高手.smd.zip"; sourceTree = "<group>"; };
+		85914F4D16EEE66D00E188D5 /* 火枪英雄.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "火枪英雄.bin.zip"; sourceTree = "<group>"; };
+		85914F4E16EEE66D00E188D5 /* 火枪英雄.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "火枪英雄.jpg"; sourceTree = "<group>"; };
+		85914F4F16EEE66D00E188D5 /* 火箭骑士.gen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "火箭骑士.gen.zip"; sourceTree = "<group>"; };
+		85914F5016EEE66D00E188D5 /* 火箭骑士.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火箭骑士.png"; sourceTree = "<group>"; };
+		85914F5116EEE66D00E188D5 /* 炸弹人.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "炸弹人.bin.zip"; sourceTree = "<group>"; };
+		85914F5216EEE66D00E188D5 /* 炸弹人.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "炸弹人.jpg"; sourceTree = "<group>"; };
+		85914F5316EEE66D00E188D5 /* 热血足球.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "热血足球.bin.zip"; sourceTree = "<group>"; };
+		85914F5416EEE66D00E188D5 /* 热血足球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "热血足球.jpg"; sourceTree = "<group>"; };
+		85914F5516EEE66D00E188D5 /* 秘境魔宝中文版.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "秘境魔宝中文版.png"; sourceTree = "<group>"; };
+		85914F5616EEE66D00E188D5 /* 秘境魔宝中文版.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "秘境魔宝中文版.smd.zip"; sourceTree = "<group>"; };
+		85914F5716EEE66D00E188D5 /* 究极七龙珠.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "究极七龙珠.bin.zip"; sourceTree = "<group>"; };
+		85914F5816EEE66D00E188D5 /* 究极七龙珠.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "究极七龙珠.png"; sourceTree = "<group>"; };
+		85914F5916EEE66D00E188D5 /* 粒子斗士2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "粒子斗士2.png"; sourceTree = "<group>"; };
+		85914F5A16EEE66D00E188D5 /* 粒子斗士2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "粒子斗士2.smd.zip"; sourceTree = "<group>"; };
+		85914F5B16EEE66D00E188D5 /* 联合前线汉化版.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联合前线汉化版.png"; sourceTree = "<group>"; };
+		85914F5C16EEE66D00E188D5 /* 联合前线汉化版.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "联合前线汉化版.smd.zip"; sourceTree = "<group>"; };
+		85914F5D16EEE66D00E188D5 /* 蚯蚓吉姆2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蚯蚓吉姆2.png"; sourceTree = "<group>"; };
+		85914F5E16EEE66D00E188D5 /* 蚯蚓吉姆2.smd.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "蚯蚓吉姆2.smd.zip"; sourceTree = "<group>"; };
+		85914F5F16EEE66D00E188D5 /* 街霸2.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "街霸2.bin.zip"; sourceTree = "<group>"; };
+		85914F6016EEE66D00E188D5 /* 街霸2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "街霸2.png"; sourceTree = "<group>"; };
+		85914F6116EEE66D00E188D5 /* 超级忍3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "超级忍3.bin.zip"; sourceTree = "<group>"; };
+		85914F6216EEE66D00E188D5 /* 超级忍3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "超级忍3.png"; sourceTree = "<group>"; };
+		85914F6316EEE66D00E188D5 /* 音速小子3.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "音速小子3.bin.zip"; sourceTree = "<group>"; };
+		85914F6416EEE66D00E188D5 /* 音速小子3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "音速小子3.png"; sourceTree = "<group>"; };
+		85914F6516EEE66D00E188D5 /* 饿狼传说.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "饿狼传说.bin.zip"; sourceTree = "<group>"; };
+		85914F6616EEE66D00E188D5 /* 饿狼传说.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "饿狼传说.png"; sourceTree = "<group>"; };
+		85914F6716EEE66D00E188D5 /* 魂斗罗4铁血兵团.bin.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "魂斗罗4铁血兵团.bin.zip"; sourceTree = "<group>"; };
+		85914F6816EEE66D00E188D5 /* 魂斗罗4铁血兵团.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "魂斗罗4铁血兵团.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2150,62 +2150,71 @@
 		8574F9D516E9C20A00C5C445 /* rom */ = {
 			isa = PBXGroup;
 			children = (
-				8574F9D616E9C20A00C5C445 /* 三国志5.png */,
-				8574F9D716E9C20A00C5C445 /* 三国志5.smd.zip */,
-				8574F9D816E9C20A00C5C445 /* 光明力量2.png */,
-				8574F9D916E9C20A00C5C445 /* 光明力量2.smd.zip */,
-				8574F9DA16E9C20A00C5C445 /* 双截龙3.bin.zip */,
-				8574F9DB16E9C20A00C5C445 /* 双截龙3.png */,
-				8574F9DC16E9C20A00C5C445 /* 吞食天地3.png */,
-				8574F9DD16E9C20A00C5C445 /* 吞食天地3.smd.zip */,
-				8574F9DE16E9C20A00C5C445 /* 外星战士.bin.zip */,
-				8574F9DF16E9C20A00C5C445 /* 外星战士.png */,
-				8574F9E016E9C20A00C5C445 /* 大战略.bin.zip */,
-				8574F9E116E9C20A00C5C445 /* 大战略.png */,
-				8574F9E216E9C20A00C5C445 /* 幽游白书.png */,
-				8574F9E316E9C20A00C5C445 /* 幽游白书.smd.zip */,
-				8574F9E416E9C20A00C5C445 /* 怒之铁拳3.bin.zip */,
-				8574F9E516E9C20A00C5C445 /* 怒之铁拳3.png */,
-				8574F9E616E9C20A00C5C445 /* 梦幻之星4.bin.zip */,
-				8574F9E716E9C20A00C5C445 /* 梦幻之星4.png */,
-				8574F9E816E9C20A00C5C445 /* 梦幻模拟战2.png */,
-				8574F9E916E9C20A00C5C445 /* 梦幻模拟战2.smd.zip */,
-				8574F9EA16E9C20A00C5C445 /* 洛克人.bin.zip */,
-				8574F9EB16E9C20A00C5C445 /* 洛克人.png */,
-				8574F9EC16E9C20A00C5C445 /* 灌篮高手.png */,
-				8574F9ED16E9C20A00C5C445 /* 灌篮高手.smd.zip */,
-				8574F9EE16E9C20A00C5C445 /* 火枪英雄.bin.zip */,
-				8574F9EF16E9C20A00C5C445 /* 火枪英雄.jpg */,
-				8574F9F016E9C20A00C5C445 /* 火箭骑士.gen.zip */,
-				8574F9F116E9C20A00C5C445 /* 火箭骑士.png */,
-				8574F9F216E9C20A00C5C445 /* 炸弹人.bin.zip */,
-				8574F9F316E9C20A00C5C445 /* 炸弹人.jpg */,
-				8574F9F416E9C20A00C5C445 /* 热血足球.bin.zip */,
-				8574F9F516E9C20A00C5C445 /* 热血足球.jpg */,
-				8574F9F616E9C20A00C5C445 /* 秘境魔宝中文版.png */,
-				8574F9F716E9C20A00C5C445 /* 秘境魔宝中文版.smd.zip */,
-				8574F9F816E9C20A00C5C445 /* 究极七龙珠.bin.zip */,
-				8574F9F916E9C20A00C5C445 /* 究极七龙珠.png */,
-				8574F9FA16E9C20A00C5C445 /* 粒子斗士2.png */,
-				8574F9FB16E9C20A00C5C445 /* 粒子斗士2.smd.zip */,
-				8574F9FC16E9C20A00C5C445 /* 联合前线汉化版.png */,
-				8574F9FD16E9C20A00C5C445 /* 联合前线汉化版.smd.zip */,
-				8574F9FE16E9C20A00C5C445 /* 蚯蚓吉姆2.png */,
-				8574F9FF16E9C20A00C5C445 /* 蚯蚓吉姆2.smd.zip */,
-				8574FA0016E9C20A00C5C445 /* 街霸2.bin.zip */,
-				8574FA0116E9C20A00C5C445 /* 街霸2.png */,
-				8574FA0216E9C20A00C5C445 /* 超级忍3.bin.zip */,
-				8574FA0316E9C20A00C5C445 /* 超级忍3.png */,
-				8574FA0416E9C20A00C5C445 /* 音速小子3.bin.zip */,
-				8574FA0516E9C20A00C5C445 /* 音速小子3.png */,
-				8574FA0616E9C20A00C5C445 /* 饿狼传说.bin.zip */,
-				8574FA0716E9C20A00C5C445 /* 饿狼传说.png */,
-				8574FA0816E9C20A00C5C445 /* 魂斗罗4铁血兵团.bin.zip */,
-				8574FA0916E9C20A00C5C445 /* 魂斗罗4铁血兵团.png */,
+				85914F3416EEE66D00E188D5 /* rom */,
 			);
 			name = rom;
 			path = "../../mdemu-pt_2/Roms/rom";
 			sourceTree = "<group>";
+		};
+		85914F3416EEE66D00E188D5 /* rom */ = {
+			isa = PBXGroup;
+			children = (
+				85914F3516EEE66D00E188D5 /* 三国志5.png */,
+				85914F3616EEE66D00E188D5 /* 三国志5.smd.zip */,
+				85914F3716EEE66D00E188D5 /* 光明力量2.png */,
+				85914F3816EEE66D00E188D5 /* 光明力量2.smd.zip */,
+				85914F3916EEE66D00E188D5 /* 双截龙3.bin.zip */,
+				85914F3A16EEE66D00E188D5 /* 双截龙3.png */,
+				85914F3B16EEE66D00E188D5 /* 吞食天地3.png */,
+				85914F3C16EEE66D00E188D5 /* 吞食天地3.smd.zip */,
+				85914F3D16EEE66D00E188D5 /* 外星战士.bin.zip */,
+				85914F3E16EEE66D00E188D5 /* 外星战士.png */,
+				85914F3F16EEE66D00E188D5 /* 大战略.bin.zip */,
+				85914F4016EEE66D00E188D5 /* 大战略.png */,
+				85914F4116EEE66D00E188D5 /* 幽游白书.png */,
+				85914F4216EEE66D00E188D5 /* 幽游白书.smd.zip */,
+				85914F4316EEE66D00E188D5 /* 怒之铁拳3.bin.zip */,
+				85914F4416EEE66D00E188D5 /* 怒之铁拳3.png */,
+				85914F4516EEE66D00E188D5 /* 梦幻之星4.bin.zip */,
+				85914F4616EEE66D00E188D5 /* 梦幻之星4.png */,
+				85914F4716EEE66D00E188D5 /* 梦幻模拟战2.png */,
+				85914F4816EEE66D00E188D5 /* 梦幻模拟战2.smd.zip */,
+				85914F4916EEE66D00E188D5 /* 洛克人.bin.zip */,
+				85914F4A16EEE66D00E188D5 /* 洛克人.png */,
+				85914F4B16EEE66D00E188D5 /* 灌篮高手.png */,
+				85914F4C16EEE66D00E188D5 /* 灌篮高手.smd.zip */,
+				85914F4D16EEE66D00E188D5 /* 火枪英雄.bin.zip */,
+				85914F4E16EEE66D00E188D5 /* 火枪英雄.jpg */,
+				85914F4F16EEE66D00E188D5 /* 火箭骑士.gen.zip */,
+				85914F5016EEE66D00E188D5 /* 火箭骑士.png */,
+				85914F5116EEE66D00E188D5 /* 炸弹人.bin.zip */,
+				85914F5216EEE66D00E188D5 /* 炸弹人.jpg */,
+				85914F5316EEE66D00E188D5 /* 热血足球.bin.zip */,
+				85914F5416EEE66D00E188D5 /* 热血足球.jpg */,
+				85914F5516EEE66D00E188D5 /* 秘境魔宝中文版.png */,
+				85914F5616EEE66D00E188D5 /* 秘境魔宝中文版.smd.zip */,
+				85914F5716EEE66D00E188D5 /* 究极七龙珠.bin.zip */,
+				85914F5816EEE66D00E188D5 /* 究极七龙珠.png */,
+				85914F5916EEE66D00E188D5 /* 粒子斗士2.png */,
+				85914F5A16EEE66D00E188D5 /* 粒子斗士2.smd.zip */,
+				85914F5B16EEE66D00E188D5 /* 联合前线汉化版.png */,
+				85914F5C16EEE66D00E188D5 /* 联合前线汉化版.smd.zip */,
+				85914F5D16EEE66D00E188D5 /* 蚯蚓吉姆2.png */,
+				85914F5E16EEE66D00E188D5 /* 蚯蚓吉姆2.smd.zip */,
+				85914F5F16EEE66D00E188D5 /* 街霸2.bin.zip */,
+				85914F6016EEE66D00E188D5 /* 街霸2.png */,
+				85914F6116EEE66D00E188D5 /* 超级忍3.bin.zip */,
+				85914F6216EEE66D00E188D5 /* 超级忍3.png */,
+				85914F6316EEE66D00E188D5 /* 音速小子3.bin.zip */,
+				85914F6416EEE66D00E188D5 /* 音速小子3.png */,
+				85914F6516EEE66D00E188D5 /* 饿狼传说.bin.zip */,
+				85914F6616EEE66D00E188D5 /* 饿狼传说.png */,
+				85914F6716EEE66D00E188D5 /* 魂斗罗4铁血兵团.bin.zip */,
+				85914F6816EEE66D00E188D5 /* 魂斗罗4铁血兵团.png */,
+			);
+			name = rom;
+			path = Roms/rom;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -2417,58 +2426,58 @@
 				856BDEF816E9AF1C00C9BC68 /* dianjin_offer_top_background.png in Resources */,
 				856BDEF916E9AF1C00C9BC68 /* dianjin_offer_top_background@2x.png in Resources */,
 				856BDEFC16E9AF1C00C9BC68 /* umFeedback.bundle in Resources */,
-				8574FA0A16E9C20A00C5C445 /* 三国志5.png in Resources */,
-				8574FA0B16E9C20A00C5C445 /* 三国志5.smd.zip in Resources */,
-				8574FA0C16E9C20A00C5C445 /* 光明力量2.png in Resources */,
-				8574FA0D16E9C20A00C5C445 /* 光明力量2.smd.zip in Resources */,
-				8574FA0E16E9C20A00C5C445 /* 双截龙3.bin.zip in Resources */,
-				8574FA0F16E9C20A00C5C445 /* 双截龙3.png in Resources */,
-				8574FA1016E9C20A00C5C445 /* 吞食天地3.png in Resources */,
-				8574FA1116E9C20A00C5C445 /* 吞食天地3.smd.zip in Resources */,
-				8574FA1216E9C20A00C5C445 /* 外星战士.bin.zip in Resources */,
-				8574FA1316E9C20A00C5C445 /* 外星战士.png in Resources */,
-				8574FA1416E9C20A00C5C445 /* 大战略.bin.zip in Resources */,
-				8574FA1516E9C20A00C5C445 /* 大战略.png in Resources */,
-				8574FA1616E9C20A00C5C445 /* 幽游白书.png in Resources */,
-				8574FA1716E9C20A00C5C445 /* 幽游白书.smd.zip in Resources */,
-				8574FA1816E9C20A00C5C445 /* 怒之铁拳3.bin.zip in Resources */,
-				8574FA1916E9C20A00C5C445 /* 怒之铁拳3.png in Resources */,
-				8574FA1A16E9C20A00C5C445 /* 梦幻之星4.bin.zip in Resources */,
-				8574FA1B16E9C20A00C5C445 /* 梦幻之星4.png in Resources */,
-				8574FA1C16E9C20A00C5C445 /* 梦幻模拟战2.png in Resources */,
-				8574FA1D16E9C20A00C5C445 /* 梦幻模拟战2.smd.zip in Resources */,
-				8574FA1E16E9C20A00C5C445 /* 洛克人.bin.zip in Resources */,
-				8574FA1F16E9C20A00C5C445 /* 洛克人.png in Resources */,
-				8574FA2016E9C20A00C5C445 /* 灌篮高手.png in Resources */,
-				8574FA2116E9C20A00C5C445 /* 灌篮高手.smd.zip in Resources */,
-				8574FA2216E9C20A00C5C445 /* 火枪英雄.bin.zip in Resources */,
-				8574FA2316E9C20A00C5C445 /* 火枪英雄.jpg in Resources */,
-				8574FA2416E9C20A00C5C445 /* 火箭骑士.gen.zip in Resources */,
-				8574FA2516E9C20A00C5C445 /* 火箭骑士.png in Resources */,
-				8574FA2616E9C20A00C5C445 /* 炸弹人.bin.zip in Resources */,
-				8574FA2716E9C20A00C5C445 /* 炸弹人.jpg in Resources */,
-				8574FA2816E9C20A00C5C445 /* 热血足球.bin.zip in Resources */,
-				8574FA2916E9C20A00C5C445 /* 热血足球.jpg in Resources */,
-				8574FA2A16E9C20A00C5C445 /* 秘境魔宝中文版.png in Resources */,
-				8574FA2B16E9C20A00C5C445 /* 秘境魔宝中文版.smd.zip in Resources */,
-				8574FA2C16E9C20A00C5C445 /* 究极七龙珠.bin.zip in Resources */,
-				8574FA2D16E9C20A00C5C445 /* 究极七龙珠.png in Resources */,
-				8574FA2E16E9C20A00C5C445 /* 粒子斗士2.png in Resources */,
-				8574FA2F16E9C20A00C5C445 /* 粒子斗士2.smd.zip in Resources */,
-				8574FA3016E9C20A00C5C445 /* 联合前线汉化版.png in Resources */,
-				8574FA3116E9C20A00C5C445 /* 联合前线汉化版.smd.zip in Resources */,
-				8574FA3216E9C20A00C5C445 /* 蚯蚓吉姆2.png in Resources */,
-				8574FA3316E9C20A00C5C445 /* 蚯蚓吉姆2.smd.zip in Resources */,
-				8574FA3416E9C20A00C5C445 /* 街霸2.bin.zip in Resources */,
-				8574FA3516E9C20A00C5C445 /* 街霸2.png in Resources */,
-				8574FA3616E9C20A00C5C445 /* 超级忍3.bin.zip in Resources */,
-				8574FA3716E9C20A00C5C445 /* 超级忍3.png in Resources */,
-				8574FA3816E9C20A00C5C445 /* 音速小子3.bin.zip in Resources */,
-				8574FA3916E9C20A00C5C445 /* 音速小子3.png in Resources */,
-				8574FA3A16E9C20A00C5C445 /* 饿狼传说.bin.zip in Resources */,
-				8574FA3B16E9C20A00C5C445 /* 饿狼传说.png in Resources */,
-				8574FA3C16E9C20A00C5C445 /* 魂斗罗4铁血兵团.bin.zip in Resources */,
-				8574FA3D16E9C20A00C5C445 /* 魂斗罗4铁血兵团.png in Resources */,
+				85914F6916EEE66E00E188D5 /* 三国志5.png in Resources */,
+				85914F6A16EEE66E00E188D5 /* 三国志5.smd.zip in Resources */,
+				85914F6B16EEE66E00E188D5 /* 光明力量2.png in Resources */,
+				85914F6C16EEE66E00E188D5 /* 光明力量2.smd.zip in Resources */,
+				85914F6D16EEE66E00E188D5 /* 双截龙3.bin.zip in Resources */,
+				85914F6E16EEE66E00E188D5 /* 双截龙3.png in Resources */,
+				85914F6F16EEE66E00E188D5 /* 吞食天地3.png in Resources */,
+				85914F7016EEE66E00E188D5 /* 吞食天地3.smd.zip in Resources */,
+				85914F7116EEE66E00E188D5 /* 外星战士.bin.zip in Resources */,
+				85914F7216EEE66E00E188D5 /* 外星战士.png in Resources */,
+				85914F7316EEE66E00E188D5 /* 大战略.bin.zip in Resources */,
+				85914F7416EEE66E00E188D5 /* 大战略.png in Resources */,
+				85914F7516EEE66E00E188D5 /* 幽游白书.png in Resources */,
+				85914F7616EEE66E00E188D5 /* 幽游白书.smd.zip in Resources */,
+				85914F7716EEE66E00E188D5 /* 怒之铁拳3.bin.zip in Resources */,
+				85914F7816EEE66E00E188D5 /* 怒之铁拳3.png in Resources */,
+				85914F7916EEE66E00E188D5 /* 梦幻之星4.bin.zip in Resources */,
+				85914F7A16EEE66E00E188D5 /* 梦幻之星4.png in Resources */,
+				85914F7B16EEE66E00E188D5 /* 梦幻模拟战2.png in Resources */,
+				85914F7C16EEE66E00E188D5 /* 梦幻模拟战2.smd.zip in Resources */,
+				85914F7D16EEE66E00E188D5 /* 洛克人.bin.zip in Resources */,
+				85914F7E16EEE66E00E188D5 /* 洛克人.png in Resources */,
+				85914F7F16EEE66E00E188D5 /* 灌篮高手.png in Resources */,
+				85914F8016EEE66E00E188D5 /* 灌篮高手.smd.zip in Resources */,
+				85914F8116EEE66E00E188D5 /* 火枪英雄.bin.zip in Resources */,
+				85914F8216EEE66E00E188D5 /* 火枪英雄.jpg in Resources */,
+				85914F8316EEE66E00E188D5 /* 火箭骑士.gen.zip in Resources */,
+				85914F8416EEE66E00E188D5 /* 火箭骑士.png in Resources */,
+				85914F8516EEE66E00E188D5 /* 炸弹人.bin.zip in Resources */,
+				85914F8616EEE66E00E188D5 /* 炸弹人.jpg in Resources */,
+				85914F8716EEE66E00E188D5 /* 热血足球.bin.zip in Resources */,
+				85914F8816EEE66E00E188D5 /* 热血足球.jpg in Resources */,
+				85914F8916EEE66E00E188D5 /* 秘境魔宝中文版.png in Resources */,
+				85914F8A16EEE66E00E188D5 /* 秘境魔宝中文版.smd.zip in Resources */,
+				85914F8B16EEE66E00E188D5 /* 究极七龙珠.bin.zip in Resources */,
+				85914F8C16EEE66E00E188D5 /* 究极七龙珠.png in Resources */,
+				85914F8D16EEE66E00E188D5 /* 粒子斗士2.png in Resources */,
+				85914F8E16EEE66E00E188D5 /* 粒子斗士2.smd.zip in Resources */,
+				85914F8F16EEE66E00E188D5 /* 联合前线汉化版.png in Resources */,
+				85914F9016EEE66E00E188D5 /* 联合前线汉化版.smd.zip in Resources */,
+				85914F9116EEE66E00E188D5 /* 蚯蚓吉姆2.png in Resources */,
+				85914F9216EEE66E00E188D5 /* 蚯蚓吉姆2.smd.zip in Resources */,
+				85914F9316EEE66E00E188D5 /* 街霸2.bin.zip in Resources */,
+				85914F9416EEE66E00E188D5 /* 街霸2.png in Resources */,
+				85914F9516EEE66E00E188D5 /* 超级忍3.bin.zip in Resources */,
+				85914F9616EEE66E00E188D5 /* 超级忍3.png in Resources */,
+				85914F9716EEE66E00E188D5 /* 音速小子3.bin.zip in Resources */,
+				85914F9816EEE66E00E188D5 /* 音速小子3.png in Resources */,
+				85914F9916EEE66E00E188D5 /* 饿狼传说.bin.zip in Resources */,
+				85914F9A16EEE66E00E188D5 /* 饿狼传说.png in Resources */,
+				85914F9B16EEE66E00E188D5 /* 魂斗罗4铁血兵团.bin.zip in Resources */,
+				85914F9C16EEE66E00E188D5 /* 魂斗罗4铁血兵团.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2686,7 +2695,7 @@
 					../../3rdframework/freetype/include,
 				);
 				INFOPLIST_FILE = "MD/MD-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -2735,7 +2744,7 @@
 					../../3rdframework/freetype/include,
 				);
 				INFOPLIST_FILE = "MD/MD-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",

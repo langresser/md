@@ -473,6 +473,12 @@ static bool trackFPS = 0;
 static TimeSys prevFrameTime;
 static uint frameCount = 0;
 
+void resetOrientation()
+{
+    if(!Gfx::setValidOrientations(optionGameOrientation, 1))
+		onViewChange();
+}
+
 void startGameFromMenu()
 {
 	if(!optionFrameSkip.isConst && optionFrameSkip != EmuSystem::optionFrameSkipAuto)

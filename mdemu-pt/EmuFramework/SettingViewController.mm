@@ -19,6 +19,7 @@
 
 
 int g_currentMB = 0;
+int g_rotation = 0;
 
 @implementation SettingViewController
 
@@ -65,6 +66,8 @@ int g_currentMB = 0;
     [btnBackList setGradientType:kUIGlossyButtonGradientTypeLinearSmoothBrightToNormal];
     [settingView addSubview:btnBackList];
     
+    g_rotation = [[NSUserDefaults standardUserDefaults]integerForKey:@"rotation"];
+    
     [self setView:settingView];
 }
 
@@ -84,11 +87,6 @@ int g_currentMB = 0;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return interfaceOrientation == UIInterfaceOrientationPortrait;
-//    if (isPad()) {
-//        return interfaceOrientation == UIInterfaceOrientationPortrait;
-//    } else {
-//        return (YES);   
-//    }
 }
 
 -(void)adjustView:(UIInterfaceOrientation)toInterfaceOrientation
@@ -183,7 +181,7 @@ int g_currentMB = 0;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 6;
+        return 7;
     } else if (section == 1) {
         return 4;
     }
@@ -297,18 +295,29 @@ int g_currentMB = 0;
                 case 0:
                     cell.textLabel.text = @"读档";
                     cell.detailTextLabel.text = saveStatus;
+                    cell.accessoryType = UITableViewCellAccessoryNone;
                     break;
                 case 1:
                     cell.textLabel.text = @"存档";
                     cell.detailTextLabel.text = saveStatus;
+                    cell.accessoryType = UITableViewCellAccessoryNone;
                     break;
                 case 4:
                     cell.textLabel.text = @"重置游戏";
                     cell.detailTextLabel.text = @"";
+                    cell.accessoryType = UITableViewCellAccessoryNone;
                     break;
                 case 5:
+                {
+                    cell.textLabel.text = @"竖屏显示";
+                    cell.detailTextLabel.text = @"";
+                    cell.accessoryType = g_rotation != 0 ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+                }
+                    break;
+                case 6:
                     cell.textLabel.text = @"高级设置";
                     cell.detailTextLabel.text = @"";
+                    cell.accessoryType = UITableViewCellAccessoryNone;
                     break;
                 default:
                     break;
@@ -378,6 +387,17 @@ int g_currentMB = 0;
             }
                 break;
             case 5:
+            {
+                g_rotation = g_rotation ? 0 : 1;
+                [[NSUserDefaults standardUserDefaults]setInteger:g_rotation forKey:@"rotation"];
+                [[NSUserDefaults standardUserDefaults]synchronize];
+                [m_tableView reloadData];
+                
+                extern void resetOrientation();
+                resetOrientation();
+            }
+                break;
+            case 6:
                 [self onClickBack];
                 extern void restoreMenuFromGame();
                 restoreMenuFromGame();
